@@ -1,93 +1,608 @@
-# rushhour_casper_romeo_2.0
+# Rush Hour Game
 
+A JavaFX implementation of the classic Rush Hour puzzle game with multiple difficulty levels, user authentication, and comprehensive game features.
 
+![Java](https://img.shields.io/badge/Java-21+-orange.svg)
+![JavaFX](https://img.shields.io/badge/JavaFX-23-blue.svg)
+![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red.svg)
 
-## Getting started
+## Table of Contents
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+- [Overview](#overview)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Gameplay](#gameplay)
+- [Domain Model](#domain-model)
+- [Project Structure](#project-structure)
+- [Technical Details](#technical-details)
+- [Troubleshooting](#troubleshooting)
+- [Credits](#credits)
+- [License](#license)
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## Overview
 
-## Add your files
+Rush Hour is a logic puzzle game where players must navigate a red car through a grid of blocking vehicles to reach the exit. This implementation features four difficulty levels, a timer system, highscore tracking, and both standard and chaos game modes.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## Features
 
+### Core Gameplay
+
+- **Multiple Difficulty Levels**: Beginner, Intermediate, Advanced, Expert
+- **4 Levels per Difficulty**: 16 unique puzzles total
+- **Chaos Mode**: Randomly scrambled puzzles for unpredictable gameplay
+- **Timed Challenges**: Different time limits based on difficulty
+- **Move Counter**: Track efficiency with move counting
+- **Drag-and-Drop Controls**: Intuitive vehicle movement
+
+### User Management
+
+- **User Authentication**: Sign up, login, and guest mode
+- **Progress Tracking**: Automatically saves current level and difficulty
+- **Persistent Storage**: User data stored in binary files
+
+### Scoring System
+
+- **Highscore Tracking**: Records best moves and time for each level
+- **Date Stamping**: Tracks when highscores were achieved
+- **Per-Difficulty Leaderboards**: Separate highscores for each difficulty
+
+### Additional Features
+
+- **Pause/Resume**: Pause gameplay without penalty
+- **Level Selection**: Jump to any previously unlocked level
+- **Instructions**: Built-in tutorial system
+- **Credits**: Team information display
+
+## Requirements
+
+### Software Requirements
+
+- **Java Development Kit (JDK)**: Version 21 or higher
+- **JavaFX**: Version 23 or compatible
+- **IDE**: IntelliJ IDEA recommended (or any Java IDE)
+
+### JavaFX Dependencies
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-controls</artifactId>
+        <version>23</version>
+    </dependency>
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-graphics</artifactId>
+        <version>23</version>
+    </dependency>
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-base</artifactId>
+        <version>23</version>
+    </dependency>
+</dependencies>
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/casperborgonjon/rushhour_casper_romeo_2.0.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.com/casperborgonjon/rushhour_casper_romeo_2.0/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+### 1. Clone the Repository
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+```bash
+git clone <repository-url>
+cd rush_hour
+```
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+### 2. Configure Resources Directory
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+**CRITICAL**: Mark the `src/main/resources` folder as a Resources Root in your IDE.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+**IntelliX IDEA:**
+1. Right-click on `src/main/resources`
+2. Select "Mark Directory as" → "Resources Root"
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+**Eclipse:**
+1. Right-click on project → "Properties"
+2. Navigate to "Java Build Path" → "Source"
+3. Add `src/main/resources` as source folder
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+### 3. Add JavaFX Libraries
+
+**IntelliJ IDEA:**
+1. File → Project Structure → Libraries
+2. Click "+" → "Java"
+3. Navigate to JavaFX SDK lib folder
+4. Add all JavaFX JAR files
+
+**Maven**: Use the dependencies shown in the [Requirements](#requirements) section.
+
+### 4. VM Options (if needed)
+
+If JavaFX modules are not recognized, add VM options:
+
+```
+--module-path /path/to/javafx-sdk/lib --add-modules javafx.controls,javafx.fxml
+```
+
+### 5. Run the Application
+
+Execute `main.java.Main` or `main.java.MainHack` class.
+
+## Gameplay
+
+### Objective
+
+Move the red car to the exit (rightmost position in row 2) by sliding other vehicles out of the way.
+
+### Controls
+
+- **Click and Drag**: Move vehicles horizontally or vertically
+- **Pause Button**: Pause/resume the timer
+- **Restart Button**: Reset current puzzle
+- **Menu Options**: Access level selection, highscores, and settings
+
+### Game Flow
+
+```
+┌─────────────┐
+│  Login/     │
+│  Sign Up    │
+└──────┬──────┘
+       │
+       v
+┌─────────────┐
+│  Home Menu  │
+└──────┬──────┘
+       │
+       ├──────────────┐
+       │              │
+       v              v
+┌─────────────┐  ┌─────────────┐
+│  Play Game  │  │Select Level │
+└──────┬──────┘  └──────┬──────┘
+       │                │
+       └────────┬───────┘
+                │
+                v
+         ┌─────────────┐
+         │  Game View  │
+         └──────┬──────┘
+                │
+         ┌──────┴──────┐
+         │             │
+         v             v
+    ┌─────────┐   ┌─────────┐
+    │ Solved  │   │Time Up! │
+    └────┬────┘   └────┬────┘
+         │             │
+         v             v
+    ┌─────────────────────┐
+    │   Next Level /      │
+    │   Restart / Menu    │
+    └─────────────────────┘
+```
+
+### Difficulty Differences
+
+| Difficulty    | Time Limit | Complexity        |
+|---------------|------------|-------------------|
+| Beginner      | 3:00       | Few vehicles      |
+| Intermediate  | 5:00       | Moderate blocking |
+| Advanced      | 5:00       | Complex layouts   |
+| Expert        | 7:00       | Maximum challenge |
+
+### Chaos Mode
+
+- Randomly scrambles existing puzzles
+- Unpredictable vehicle positions
+- Great for replay value
+- No highscore tracking
+
+## Domain Model
+
+```mermaid
+classDiagram
+    %% Main Game Classes
+    class Game {
+        -Puzzle puzzle
+        -int level
+        -Difficulty difficulty
+        -Vehicle redCar
+        -int moves
+        -PuzzleManager puzzleManager
+        -User user
+        -boolean isChaos
+        -Timer timer
+        +Game(User user)
+        +Game(User user, int level, Difficulty difficulty)
+        +loadNextPuzzle()
+        +restartPuzzle()
+        +isSolved() boolean
+        +updateHighscoreIfSolved()
+        +incrementMoves()
+        +makeMove(Vehicle vehicle, int move)
+        +startChaosGame(Difficulty difficulty)
+        +isNotChaos() boolean
+        +getPuzzle() Puzzle
+        +getLevel() int
+        +getDifficulty() Difficulty
+        +getMoves() int
+        +getCurrentUser() User
+        +getTimer() Timer
+    }
+
+    class Puzzle {
+        -Board board
+        -Map~Color, Vehicle~ vehicles
+        +Puzzle(Map~Color, Vehicle~ vehicles)
+        +copy() Puzzle
+        +getVehicleByColor(Color color) Vehicle
+        +getBoard() Board
+        +getVehicles() Map~Color, Vehicle~
+    }
+
+    class Board {
+        -Vehicle[][] grid
+        -int BOARD_SIZE = 6
+        +Board()
+        -isOutOfBounds(int x, int y) boolean
+        -isValidPlacement(Vehicle vehicle) boolean
+        -isValidMove(Vehicle vehicle, int move) boolean
+        +placeVehicleOnGrid(Vehicle vehicle)
+        -clearVehicle(Vehicle vehicle)
+        +moveVehicle(Vehicle vehicle, int move)
+    }
+
+    class PuzzleManager {
+        -List~Puzzle~ beginnerPuzzles
+        -List~Puzzle~ intermediatePuzzles
+        -List~Puzzle~ advancedPuzzles
+        -List~Puzzle~ expertPuzzles
+        +PuzzleManager()
+        -initializePuzzleManager()
+        -loadPuzzlesFromResource(String resourcePath, List~Puzzle~ puzzleList)
+        -parseVehicleLine(String puzzleLine) Vehicle
+        +generateChaosPuzzle(Difficulty difficulty) Puzzle
+        +getPuzzle(Difficulty difficulty, int level) Puzzle
+    }
+
+    class Timer {
+        -int elapsedSeconds
+        -boolean isPaused
+        -Difficulty difficulty
+        +Timer(Difficulty difficulty)
+        +isTimeUp() boolean
+        +incrementTime()
+        +getMaxTimeInSeconds() int
+        +getRemainingTimeInSeconds() int
+        +formatTime(int seconds) String
+        +getElapsedSeconds() int
+        +setElapsedSeconds(int elapsedSeconds)
+        +setPaused(boolean paused)
+        +isPaused() boolean
+    }
+
+    %% Vehicle Hierarchy
+    class Vehicle {
+        <<abstract>>
+        #Color color
+        #int size
+        #boolean isHorizontal
+        #List~int[]~ occupiedPositions
+        #boolean isMoved
+        +Vehicle(Color color, int size, boolean isHorizontal, int frontX, int frontY)
+        +initializePositions(int frontX, int frontY)
+        +isHorizontal() boolean
+        +isMoved() boolean
+        +setMoved(boolean isMoved)
+        +moveHorizontal(int deltaX)
+        +moveVertical(int deltaY)
+        +copyVehicle()* Vehicle
+        +getSize() int
+        +getColor() Color
+        +getOccupiedPositions() List~int[]~
+    }
+
+    class Car {
+        -int CAR_SIZE = 2
+        +Car(Color color, boolean isHorizontal, int frontX, int frontY)
+        +copyVehicle() Car
+    }
+
+    class Truck {
+        -int TRUCK_SIZE = 3
+        +Truck(Color color, boolean isHorizontal, int frontX, int frontY)
+        +copyVehicle() Truck
+    }
+
+    class IsMovable {
+        <<interface>>
+        +moveHorizontal(int deltaX)
+        +moveVertical(int deltaY)
+    }
+
+    %% User Management
+    class User {
+        -String username
+        -String password
+        -int currentLevel
+        -Difficulty currentDifficulty
+        -Map~Difficulty, Map~Integer, Highscore~~ highscores
+        +User(String username, String password)
+        +updateHighScore(Difficulty difficulty, int level, int moves, int timeInSeconds)
+        -isNewScoreBetter(Highscore existingScore, int newMoves, int newTime) boolean
+        +getUsername() String
+        +getPassword() String
+        +getCurrentLevel() int
+        +getCurrentDifficulty() Difficulty
+        +setCurrentLvlDiff(int currentLevel, Difficulty currentDifficulty)
+        +getHighscores() Map~Difficulty, Map~Integer, Highscore~~
+    }
+
+    class UserManager {
+        -String USERS_DIRECTORY = "users"
+        -String USER_FILE_EXTENSION = ".bin"
+        -Map~String, User~ users
+        +UserManager()
+        -createUsersDirectoryIfNotExists()
+        -loadAllUsers()
+        -loadUser(Path userFile)
+        -saveUser(User user)
+        +signUp(String username, String password) boolean
+        +login(String username, String password) User
+        +updateUser(User user)
+    }
+
+    class Highscore {
+        -int moves
+        -int timeInSeconds
+        -Date date
+        +Highscore(int moves, int timeInSeconds, Date date)
+        +getFormattedTime() String
+        +getMoves() int
+        +getTimeInSeconds() int
+        +getDate() Date
+    }
+
+    %% Enums
+    class Difficulty {
+        <<enumeration>>
+        BEGINNER
+        INTERMEDIATE
+        ADVANCED
+        EXPERT
+        +nextDifficulty() Difficulty
+        +previousDifficulty() Difficulty
+        +toString() String
+    }
+
+    class Color {
+        <<enumeration>>
+        RED
+        BLUE
+        GREEN
+        YELLOW
+        ORANGE
+        PURPLE
+        LIGHT_BLUE
+        LIGHT_YELLOW
+        LIGHT_GREEN
+        MAGENTA
+        PINK
+        TURQUOISE
+        GREY
+        LIGHT_GREY
+        BLACK
+        BROWN
+    }
+
+    %% Exceptions
+    class PuzzleLoadException {
+        -String userFriendlyMessage
+        +PuzzleLoadException(String message)
+        +PuzzleLoadException(String message, Throwable cause)
+        +PuzzleLoadException(Throwable cause)
+        +getUserFriendlyMessage() String
+        -generateUserFriendlyMessage(String errorMessage) String
+    }
+
+    class UserFileException {
+        +UserFileException(String message)
+    }
+
+    class UserLoginException {
+        +UserLoginException(String message)
+    }
+
+    class UserRegistrationException {
+        +UserRegistrationException(String message)
+    }
+
+    %% Relationships
+    Game "1" --> "1" Puzzle : contains
+    Game "1" --> "0..1" User : tracks
+    Game "1" --> "1" Timer : uses
+    Game "1" --> "1" PuzzleManager : uses
+    Game --> Difficulty : references
+
+    Puzzle "1" --> "1" Board : contains
+    Puzzle "1" --> "*" Vehicle : manages
+    Puzzle --> Color : maps by
+
+    Board --> Vehicle : places/moves
+
+    Vehicle <|-- Car : extends
+    Vehicle <|-- Truck : extends
+    Vehicle ..|> IsMovable : implements
+    Vehicle --> Color : has
+
+    User "1" --> "*" Highscore : stores
+    User --> Difficulty : tracks current
+
+    UserManager --> User : manages
+
+    PuzzleManager --> Puzzle : creates
+    PuzzleManager --> Difficulty : organizes by
+
+    Timer --> Difficulty : configures time limit
+
+    PuzzleLoadException --|> RuntimeException
+    UserFileException --|> RuntimeException
+    UserLoginException --|> RuntimeException
+    UserRegistrationException --|> RuntimeException
+```
+
+### Key Relationships
+
+- **Game** manages the overall game state, containing a Puzzle, User, Timer, and PuzzleManager
+- **Puzzle** contains a Board and a collection of Vehicles mapped by Color
+- **Board** maintains a 6x6 grid and handles vehicle placement and movement validation
+- **Vehicle** (abstract) is implemented by Car and Truck, each occupying different amounts of space
+- **User** tracks progress, current level/difficulty, and maintains a nested map of Highscores
+- **PuzzleManager** loads puzzles from resource files and generates chaos mode puzzles
+- **Timer** handles countdown logic based on difficulty level
+
+## Project Structure
+
+```
+rush_hour/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── model/
+│   │   │   │   ├── enums/
+│   │   │   │   │   ├── Color.java
+│   │   │   │   │   └── Difficulty.java
+│   │   │   │   ├── exceptions/
+│   │   │   │   │   ├── PuzzleLoadException.java
+│   │   │   │   │   ├── UserFileException.java
+│   │   │   │   │   ├── UserLoginException.java
+│   │   │   │   │   └── UserRegistrationException.java
+│   │   │   │   ├── game/
+│   │   │   │   │   ├── Board.java
+│   │   │   │   │   ├── Game.java
+│   │   │   │   │   ├── Highscore.java
+│   │   │   │   │   ├── Puzzle.java
+│   │   │   │   │   ├── PuzzleManager.java
+│   │   │   │   │   └── Timer.java
+│   │   │   │   ├── user/
+│   │   │   │   │   ├── User.java
+│   │   │   │   │   └── UserManager.java
+│   │   │   │   └── vehicles/
+│   │   │   │       ├── Car.java
+│   │   │   │       ├── IsMovable.java
+│   │   │   │       ├── Truck.java
+│   │   │   │       └── Vehicle.java
+│   │   │   ├── view/
+│   │   │   │   ├── chaosview/
+│   │   │   │   ├── creditsview/
+│   │   │   │   ├── gameview/
+│   │   │   │   ├── highscoreview/
+│   │   │   │   ├── homemenuview/
+│   │   │   │   ├── instructionsview/
+│   │   │   │   ├── loginview/
+│   │   │   │   └── selectlevelview/
+│   │   │   ├── Main.java
+│   │   │   └── MainHack.java
+│   │   └── resources/          ← MUST BE MARKED AS RESOURCES ROOT
+│   │       ├── fonts/
+│   │       ├── images/
+│   │       ├── puzzles/
+│   │       ├── stylesheet/
+│   │       └── txtfiles/
+│   └── test/
+├── users/                      ← Generated at runtime
+└── README.md
+```
+
+## Technical Details
+
+### Architecture Pattern
+
+**Model-View-Presenter (MVP)**
+- **Model**: Business logic and data structures
+- **View**: JavaFX UI components
+- **Presenter**: Mediates between Model and View
+
+### Key Design Decisions
+
+#### Puzzle Storage
+
+Puzzles are stored in text files with the format:
+
+```
+PUZZLE
+CAR;RED;true;5;2
+TRUCK;BLUE;false;0;0
+...
+```
+
+#### User Persistence
+
+- Binary serialization for user data
+- Separate file per user in `users/` directory
+- Automatic directory creation on first run
+
+#### Move Validation
+
+- Board class validates moves before execution
+- Checks for out-of-bounds and collisions
+- Prevents invalid vehicle positions
+
+#### Timer Implementation
+
+- JavaFX Timeline for countdown
+- Pausable without data loss
+- Automatic time-up detection
+
+### Exception Handling
+
+Custom exceptions provide user-friendly error messages:
+
+- **PuzzleLoadException**: Issues loading puzzle files
+- **UserFileException**: File I/O problems
+- **UserLoginException**: Authentication failures
+- **UserRegistrationException**: Account creation issues
+
+### Sub-Presenters
+
+GamePresenter delegates responsibilities:
+
+- **VehicleSubPresenter**: Handles vehicle drag-and-drop
+- **TimerSubPresenter**: Manages countdown timer
+
+## Troubleshooting
+
+### Resources Not Found
+
+- Ensure `src/main/resources` is marked as Resources Root
+- Verify resource files exist in correct folders
+- Check file paths use `/` (forward slash)
+
+### JavaFX Runtime Errors
+
+- Confirm JavaFX libraries are properly configured
+- Add VM options if modules aren't recognized
+- Verify Java version compatibility
+
+### User Data Issues
+
+- Check `users/` directory permissions
+- Ensure adequate disk space
+- Verify serialization compatibility
+
+### Image Loading Failures
+
+- Confirm vehicle images exist in `resources/images/`
+- Check image naming convention matches code
+- Verify image format (PNG recommended)
+
+## Credits
+
+**Developed by**: Casper & Romeo  
+**Course**: Object-Oriented Programming Project  
+**Year**: 2025
 
 ## License
-For open source projects, say how it is licensed.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+© 2025 Casper & Romeo. All rights reserved.
