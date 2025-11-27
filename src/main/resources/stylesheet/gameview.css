@@ -1,0 +1,103 @@
+* {
+    -fx-text-fill: #def4ff;
+}
+
+Button {
+    -fx-font-family: "Montserrat";
+    -fx-text-fill: black;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-background-color: linear-gradient(to right, lightgray, antiquewhite);
+    -fx-padding: 10px;
+    -fx-font-size: 14pt;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.2), 5, 0, 0, 2);
+    -fx-max-width: 200px;
+    -fx-cursor: hand;
+}
+
+Button:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.2), 5, 0, 0, 2);
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+}
+
+.puzzle-sub-view {
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-min-width: 300px;
+    -fx-min-height: 650px;
+    -fx-pref-width: 300px;
+    -fx-pref-height: 650px;
+    -fx-max-width: 300px;
+    -fx-max-height: 650px;
+}
+
+Label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Montserrat";
+}
+
+.game-view {
+    -fx-background-image: url("/images/gameview_background.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-min-width: 1200px;
+    -fx-min-height: 700px;
+    -fx-pref-width: 1200px;
+    -fx-pref-height: 700px;
+    -fx-max-width: 1200px;
+    -fx-max-height: 700px;
+}
+
+.game-sub-view {
+    -fx-min-width: 700px;
+    -fx-min-height: 700px;
+    -fx-pref-width: 700px;
+    -fx-pref-height: 700px;
+    -fx-max-width: 700px;
+    -fx-max-height: 700px;
+}
+
+.vehicle {
+    -fx-cursor: hand;
+}
+
+.menu-bar {
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+    -fx-border-color: transparent transparent black transparent;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.menu {
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 12pt;
+    -fx-background-radius: 5px;
+}
+
+.menu:hover {
+    -fx-cursor: hand;
+    -fx-background-color: black;
+    -fx-text-fill: #def4ff;
+}
+
+.menu-item {
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 11pt;
+    -fx-background-radius: 5px;
+}
+
+.menu-item .label {
+    -fx-text-fill: black;
+}
+
+
+.menu-item:focused {
+    -fx-background-color: black;
+    -fx-cursor: hand;
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: white;
+}

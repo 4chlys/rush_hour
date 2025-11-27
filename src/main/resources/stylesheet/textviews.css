@@ -1,0 +1,17 @@
+.view {
+    -fx-background-image: url("/images/select_level_background.jpg");
+    -fx-background-position: center;
+    -fx-background-size: cover;
+    -fx-min-height: 600px;
+    -fx-min-width: 1000px;
+    -fx-pref-height: 600px;
+    -fx-pref-width: 1000px;
+    -fx-max-height: 600px;
+    -fx-max-width: 1000px;
+}
+
+.text {
+    -fx-fill: #def4ff;
+    -fx-font-size: 12pt;
+    -fx-font-family: "Montserrat";
+}

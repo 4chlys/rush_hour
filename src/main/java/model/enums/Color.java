@@ -1,0 +1,5 @@
+package main.java.model.enums;
+
+public enum Color {
+    RED, BLUE, GREEN, YELLOW, ORANGE, PURPLE, LIGHT_BLUE, LIGHT_YELLOW, LIGHT_GREEN, MAGENTA, PINK, TURQUOISE, GREY, LIGHT_GREY, BLACK, BROWN;
+}

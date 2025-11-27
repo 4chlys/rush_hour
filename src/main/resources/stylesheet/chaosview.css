@@ -1,0 +1,49 @@
+* {
+    -fx-text-fill: #def4ff;
+}
+
+Button {
+    -fx-background-color: black;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-font-size: 14pt;
+    -fx-padding: 10px;
+    -fx-max-width: 175px;
+    -fx-min-width: 175px;
+    -fx-font-family: "Montserrat";
+    -fx-cursor: hand;
+}
+
+Button:hover {
+    -fx-background-color: #def4ff;
+    -fx-text-fill: black;
+}
+
+Label {
+    -fx-font-family: "Raceline Demo";
+    -fx-font-size: 32pt;
+}
+
+.chaosview {
+    -fx-background-image: url("/images/select_level_background.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-min-height: 450px;
+    -fx-min-width: 450px;
+    -fx-pref-height: 450px;
+    -fx-pref-width: 450px;
+    -fx-max-height: 450px;
+    -fx-max-width: 450px;
+}
+
+.contentBox {
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-max-width: 350px;
+    -fx-max-height: 350px;
+    -fx-pref-width: 350px;
+    -fx-pref-height: 350px;
+    -fx-min-width: 350px;
+    -fx-min-height: 350px;
+}

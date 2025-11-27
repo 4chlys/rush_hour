@@ -1,0 +1,74 @@
+* {
+    -fx-text-fill: #def4ff;
+}
+
+Button {
+    -fx-background-color: black;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-font-size: 14pt;
+    -fx-padding: 10px;
+    -fx-max-width: 100px;
+    -fx-min-width: 100px;
+    -fx-font-family: "Montserrat";
+    -fx-cursor: hand;
+}
+
+Button:hover {
+    -fx-background-color: #def4ff;
+    -fx-text-fill: black;
+}
+
+Label {
+    -fx-font-family: "Raceline Demo";
+    -fx-font-size: 32pt;
+}
+
+.select-level-view {
+    -fx-background-image: url("/images/select_level_background.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-min-height: 450px;
+    -fx-min-width: 450px;
+    -fx-pref-height: 450px;
+    -fx-pref-width: 450px;
+    -fx-max-height: 450px;
+    -fx-max-width: 450px;
+}
+
+.contentBox {
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-max-width: 350px;
+    -fx-max-height: 300px;
+    -fx-pref-width: 350px;
+    -fx-pref-height: 300px;
+    -fx-min-width: 350px;
+    -fx-min-height: 300px;
+}
+
+.switch-difficulty-hbox {
+    -fx-min-width: 210px;
+    -fx-pref-width: 210px;
+    -fx-max-width: 210px;
+}
+
+.switch-button {
+    -fx-background-color: #def4ff;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-width: 2px;
+    -fx-border-color: #def4ff;
+    -fx-font-size: 14pt;
+    -fx-padding: 5px;
+    -fx-max-width: 125px;
+    -fx-min-width: 125px;
+    -fx-font-family: "Montserrat";
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
+
+.switch-button:hover {
+    -fx-border-color: black;
+}

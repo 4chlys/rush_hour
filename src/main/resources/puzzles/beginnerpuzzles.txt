@@ -1,0 +1,55 @@
+# easypuzzles.txt
+# Format: TYPE;COLOR;IS_HORIZONTAL;X;Y
+# TYPE: CAR or TRUCK
+# COLOR: One of the enum values from Color
+# IS_HORIZONTAL: true or false
+# X;Y: Position coordinates
+
+PUZZLE
+CAR;RED;true;2;2
+CAR;LIGHT_BLUE;true;5;4
+CAR;LIGHT_GREEN;true;1;0
+CAR;ORANGE;false;0;5
+TRUCK;YELLOW;false;5;2
+TRUCK;MAGENTA;false;0;3
+TRUCK;BLUE;false;3;3
+TRUCK;GREEN;true;4;5
+
+PUZZLE
+CAR;RED;true;2;2
+CAR;LIGHT_BLUE;false;4;1
+CAR;LIGHT_GREEN;false;1;1
+CAR;ORANGE;true;3;0
+CAR;PINK;false;5;1
+CAR;PURPLE;false;3;2
+CAR;GREEN;false;5;3
+CAR;LIGHT_GREY;false;3;5
+CAR;YELLOW;true;3;3
+
+PUZZLE
+CAR;RED;true;2;2
+CAR;LIGHT_BLUE;true;5;0
+CAR;LIGHT_GREEN;true;1;0
+CAR;ORANGE;false;2;1
+CAR;PINK;true;1;1
+CAR;PURPLE;false;3;5
+CAR;GREEN;true;5;4
+CAR;BLACK;true;1;5
+CAR;LIGHT_GREY;true;5;5
+TRUCK;YELLOW;false;5;3
+TRUCK;BLUE;true;3;3
+TRUCK;MAGENTA;false;0;4
+
+PUZZLE
+CAR;RED;true;1;2
+CAR;LIGHT_BLUE;true;5;0
+CAR;LIGHT_GREEN;false;1;1
+CAR;ORANGE;true;3;0
+CAR;PINK;false;3;2
+CAR;PURPLE;true;5;1
+CAR;GREEN;false;5;3
+CAR;BLACK;false;2;5
+CAR;LIGHT_GREY;false;5;5
+TRUCK;YELLOW;false;4;4
+TRUCK;BLUE;true;3;3
+TRUCK;MAGENTA;false;0;5

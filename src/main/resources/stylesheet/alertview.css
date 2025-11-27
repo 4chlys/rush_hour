@@ -1,0 +1,86 @@
+.dialog-pane {
+    -fx-background-image: url("/images/pexels-lynxexotics-3770875.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+.dialog-pane .label {
+    -fx-font-family: "Montserrat";
+    -fx-text-fill: #def4ff;
+    -fx-font-size: 12pt;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.8), 3, 0, 0, 0);
+}
+
+.dialog-pane > .header-panel {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-background-radius: 10px 10px 0 0;
+    -fx-padding: 10px;
+}
+
+.dialog-pane > .header-panel .label {
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+}
+
+.dialog-pane > .content {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-padding: 15px;
+}
+
+.dialog-pane .button-bar {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-background-radius: 0 0 10px 10px;
+    -fx-padding: 10px;
+}
+
+.dialog-pane .button {
+    -fx-font-family: "Montserrat";
+    -fx-text-fill: black;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-background-color: linear-gradient(to right, lightgray, antiquewhite);
+    -fx-padding: 8px 15px;
+    -fx-font-size: 12pt;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.2), 5, 0, 0, 2);
+    -fx-cursor: hand;
+}
+
+.dialog-pane .button:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.2), 5, 0, 0, 2);
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Style for the expandable content (for error details) */
+.dialog-pane .expandable-content {
+    -fx-padding: 15px;
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Style for text areas in error dialogs */
+.dialog-pane .text-area {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-text-fill: #def4ff;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-font-family: "Monospaced";
+}
+
+.dialog-pane .text-area .viewport,
+.dialog-pane .text-area .content {
+    -fx-background-color: transparent;
+}
+
+.dialog-pane.time-up > .header-panel {
+    -fx-background-color: rgba(139, 0, 0, 0.7);
+}
+
+.dialog-pane.level-completed > .header-panel {
+    -fx-background-color: rgba(0, 100, 0, 0.7);
+}
+
+.dialog-pane.close-game > .header-panel {
+    -fx-background-color: rgba(164, 150, 0, 0.71);
+}

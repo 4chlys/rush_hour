@@ -1,0 +1,160 @@
+* {
+    -fx-text-fill: #def4ff;
+}
+
+.highscore-view {
+    -fx-background-image: url("/images/astonmartin_background.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-min-width: 800px;
+    -fx-min-height: 600px;
+    -fx-pref-width: 800px;
+    -fx-pref-height: 600px;
+    -fx-max-width: 1000px;
+    -fx-max-height: 800px;
+}
+
+#lblTitle {
+    -fx-font-size: 28pt;
+    -fx-font-family: "Raceline Demo";
+    -fx-text-fill: #def4ff;
+}
+
+#btnClose {
+    -fx-font-family: "Montserrat";
+    -fx-text-fill: black;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-background-color: linear-gradient(to right, lightgray, antiquewhite);
+    -fx-padding: 10px;
+    -fx-font-size: 14pt;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.2), 5, 0, 0, 2);
+    -fx-max-width: 200px;
+    -fx-cursor: hand;
+}
+
+#btnClose:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.2), 5, 0, 0, 2);
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+}
+
+.tab-pane {
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+    -fx-background-radius: 10px 10px 0 0;
+}
+
+.tab {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-background-radius: 5px 5px 0 0;
+    -fx-padding: 8px 15px;
+}
+
+.tab:selected {
+    -fx-background-color: black;
+}
+
+.tab:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.8);
+    -fx-cursor: hand;
+}
+
+.tab .tab-label {
+    -fx-text-fill: #def4ff;
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 12pt;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: #def4ff;
+    -fx-font-weight: bold;
+}
+
+.score-header {
+    -fx-font-family: "Montserrat";
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-padding: 5px;
+    -fx-text-fill: #def4ff;
+}
+
+.score-data {
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
+    -fx-text-fill: #def4ff;
+}
+
+.no-score-data {
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+    -fx-text-fill: #def4ff;
+    -fx-padding: 5px;
+}
+
+.no-records {
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 16px;
+    -fx-font-style: italic;
+    -fx-text-fill: #def4ff;
+    -fx-padding: 20px;
+}
+
+.table-view {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: black;
+    -fx-background-radius: 5px 5px 0 0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 35px;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #def4ff;
+}
+
+.table-view .column-header .label {
+    -fx-font-family: "Montserrat";
+    -fx-font-size: 14px;
+    -fx-text-fill: #def4ff;
+    -fx-alignment: center-left;
+}
+
+.table-row-cell {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+.table-cell {
+    -fx-text-fill: #def4ff;
+    -fx-alignment: center-left;
+    -fx-font-family: "Montserrat";
+}
+
+.content-box {
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-padding: 15px;
+}

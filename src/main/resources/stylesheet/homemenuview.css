@@ -1,0 +1,74 @@
+* {
+    -fx-text-fill: #def4ff;
+}
+
+.home-menu-view {
+    -fx-background-image: url("/images/astonmartin_background.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-min-width: 1000px;
+    -fx-min-height: 800px;
+    -fx-pref-width: 1000px;
+    -fx-pref-height: 800px;
+    -fx-max-width: 1200px;
+    -fx-max-height: 1000px;
+}
+
+#lblTitle {
+    -fx-font-size: 32pt;
+    -fx-font-family: "Raceline Demo";
+}
+
+Button {
+    -fx-font-family: "Montserrat";
+    -fx-text-fill: black;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-background-color: linear-gradient(to right, lightgray, antiquewhite);
+    -fx-padding: 10px;
+    -fx-font-size: 14pt;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.2), 5, 0, 0, 2);
+    -fx-max-width: 250px;
+    -fx-cursor: hand;
+}
+
+Button:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 255, 255, 0.2), 5, 0, 0, 2);
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+}
+
+.centerBox {
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-min-width: 350px;
+    -fx-min-height: 475px;
+    -fx-pref-width: 350px;
+    -fx-pref-height: 475px;
+    -fx-max-width: 350px;
+    -fx-max-height: 475px;
+}
+
+#btnGoBack {
+    -fx-font-family: "Montserrat";
+    -fx-text-fill: black;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-background-color: white;
+    -fx-padding: 5px;
+    -fx-font-size: 12pt;
+    -fx-max-width: 250px;
+}
+
+#btnGoBack:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-text-fill: white;
+}
+
+.bottomBox {
+    -fx-min-height: 50px;
+}

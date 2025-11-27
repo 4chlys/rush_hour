@@ -1,0 +1,37 @@
+Official Rush Hour Traffic Jam Rules
+
+
+"Rush Hour" is a sliding block puzzle game where players must navigate a gridlocked traffic jam to free their car.
+The game involves strategic thinking and problem-solving skills. Here are the rules for playing "Rush Hour":
+
+Components:
+    Game Grid: A 6x6 grid board.
+    Vehicles: Various cars and trucks in different colors and sizes.
+    Player Car: The red car that the player must maneuver out of the traffic jam.
+    Puzzles: Challenge puzzles with different setups ranging from easy to hard levels.
+
+Objective:
+    The objective is to move the player car (the red car) to the exit on the game grid by strategically sliding other vehicles out of the way.
+
+Setup:
+    Players can choose to either continue where they left off, select a level or choose to play a randomized chaos mode based on a selected difficulty.
+    The red car is positioned facing the exit, which is located on the right side of the game grid.
+
+Gameplay:
+    Moving Vehicles:
+    Players can only slide vehicles forward or backward.
+    Vehicles cannot be lifted off the board or turned.
+    Making Moves:
+    On each turn, the player slides one vehicle at a time to clear a path for the red car.
+    Continue moving vehicles until the red car can move freely to the exit.
+
+Winning the Game:
+    The game is won when the player successfully moves the red car out of the exit on the right.
+
+Strategy Tips:
+    Plan Ahead: Look several moves ahead to determine the best way to clear a path.
+    Use All Vehicles: Sometimes moving a vehicle that seems irrelevant can create the necessary space.
+    Stay Flexible: Be prepared to change your strategy as new possibilities open up.
+
+"Rush Hour" is a captivating game that enhances critical thinking and spatial reasoning. It's ideal for solo play and provides a fun and challenging experience for players of all ages.
+

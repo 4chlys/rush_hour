@@ -1,0 +1,33 @@
+A long time ago in a codebase far, far away...
+
+RUSH HOUR
+EPISODE I
+ESCAPE THE GRID
+
+It is a time of great traffic congestion.
+The brave developers of the Java Order,
+led by Romeo Weyns and Casper Borgonjon,
+have embarked on a quest to create the ultimate
+puzzle challenge, where only the cleverest
+can escape the dreaded gridlock.
+
+With guidance from the wise masters
+of the Java Council, and armed with
+nothing but their keyboards and boundless caffeine,
+they have crafted an adventure that will test
+the patience and wits of all who dare enter.
+
+Meanwhile, the Debugging Sith Lords
+plot in the shadows, throwing NullPointerExceptions
+and off-by-one errors into their path.
+
+But hope remains! With the power of logic,
+determination, and a touch of the Stack Overflow Force,
+the developers press onward.
+
+Now, the challenge falls to you, brave player.
+Will you master the grid and restore balance
+to the rush hour chaos? Or will you remain
+forever trapped in the eternal jam?
+
+May the Code be with you... Always.
