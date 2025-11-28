@@ -3,9 +3,9 @@ package main.java;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import main.java.model.exceptions.UserFileException;
 import main.java.view.loginview.LoginPresenter;
 import main.java.view.loginview.LoginView;
 
@@ -34,6 +34,11 @@ public class Main extends Application {
             stage.centerOnScreen();
             stage.show();
         } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("General Error");
+            alert.setHeaderText("Unexpected error (please submit a bug report)");
+            alert.setContentText("An unexpected error occurred: " + e.getMessage());
+            alert.showAndWait();
             Platform.exit();
         }
     }
