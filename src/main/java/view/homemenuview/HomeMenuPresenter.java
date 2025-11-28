@@ -56,9 +56,11 @@ public class HomeMenuPresenter {
                 gameView.getScene().getWindow().setWidth(1200);
                 gameView.getScene().getWindow().centerOnScreen();
             } catch (PuzzleLoadException e) {
-                handlePuzzleLoadException(e);
+                showErrorAlert("Puzzle Error", "Unexpected error during Puzzle Generation",
+                        "An unexpected error occurred: " + e.getMessage());
             } catch (Exception e) {
-                handleGenericException(e);
+                showErrorAlert("General Error", "Unexpected error during Game Start",
+                        "An unexpected error occurred: " + e.getMessage());
             }
         });
 
@@ -76,9 +78,11 @@ public class HomeMenuPresenter {
                 selectLevelStage.getScene().getStylesheets().add("/stylesheet/selectlevelview.css");
                 selectLevelStage.showAndWait();
             } catch (PuzzleLoadException e) {
-                handlePuzzleLoadException(e);
+                showErrorAlert("Puzzle Error", "Unexpected error during Puzzle Generation",
+                        "An unexpected error occurred: " + e.getMessage());
             } catch (Exception e) {
-                handleGenericException(e);
+                showErrorAlert("General Error", "Unexpected error during Level Selection",
+                        "An unexpected error occurred: " + e.getMessage());
             }
         });
 
@@ -98,9 +102,11 @@ public class HomeMenuPresenter {
             chaosStage.getScene().getStylesheets().add("/stylesheet/chaosview.css");
             chaosStage.showAndWait();
             } catch (PuzzleLoadException e) {
-                handlePuzzleLoadException(e);
+                showErrorAlert("Puzzle Error", "Unexpected error during Puzzle Generation",
+                        "An unexpected error occurred: " + e.getMessage());
             } catch (Exception e) {
-                handleGenericException(e);
+                showErrorAlert("General Error", "Unexpected error during Chaos Mode",
+                        "An unexpected error occurred: " + e.getMessage());
             }
         });
 
@@ -150,20 +156,11 @@ public class HomeMenuPresenter {
         });
     }
 
-    private void handlePuzzleLoadException(PuzzleLoadException e) {
+    private void showErrorAlert(String title, String header, String content) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Puzzle Error");
-        alert.setHeaderText("Failed to load game");
-        alert.setContentText(e.getUserFriendlyMessage());
-        alert.showAndWait();
-    }
-
-    private void handleGenericException(Exception e) {
-        e.printStackTrace();
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Error");
-        alert.setHeaderText("Failed to start game");
-        alert.setContentText(e.getMessage());
+        alert.setTitle(title);
+        alert.setHeaderText(header);
+        alert.setContentText(content);
         alert.showAndWait();
     }
 }
