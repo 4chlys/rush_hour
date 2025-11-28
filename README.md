@@ -599,7 +599,7 @@ GamePresenter delegates responsibilities:
 
 ## Credits
 
-**Developed by**: Casper & Romeo  
+**Developed by**: Casper & Romeo(4chlys)
 **Course**: Object-Oriented Programming Project  
 **Year**: 2025
 
