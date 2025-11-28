@@ -1,9 +1,11 @@
 package main.java.view.homemenuview;
 
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import main.java.model.enums.Difficulty;
+import main.java.model.exceptions.PuzzleLoadException;
 import main.java.model.game.Game;
 import main.java.model.user.User;
 import main.java.view.chaosview.ChaosPresenter;
@@ -43,32 +45,45 @@ public class HomeMenuPresenter {
         });
 
         homeMenuView.getBtnPlay().setOnAction(actionEvent -> {
-            GameView gameView = new GameView();
-            Game game = new Game(this.user);
-            GamePresenter gamePresenter = new GamePresenter(gameView, game, this.user);
-            homeMenuView.getScene().setRoot(gameView);
+            try {
+                GameView gameView = new GameView();
+                Game game = new Game(this.user);
+                GamePresenter gamePresenter = new GamePresenter(gameView, game, this.user);
+                homeMenuView.getScene().setRoot(gameView);
 
-            gameView.getScene().getStylesheets().add("/stylesheet/gameview.css");
-            gameView.getScene().getWindow().setHeight(700);
-            gameView.getScene().getWindow().setWidth(1200);
-            gameView.getScene().getWindow().centerOnScreen();
+                gameView.getScene().getStylesheets().add("/stylesheet/gameview.css");
+                gameView.getScene().getWindow().setHeight(700);
+                gameView.getScene().getWindow().setWidth(1200);
+                gameView.getScene().getWindow().centerOnScreen();
+            } catch (PuzzleLoadException e) {
+                handlePuzzleLoadException(e);
+            } catch (Exception e) {
+                handleGenericException(e);
+            }
         });
 
         homeMenuView.getBtnSelectLevel().setOnAction(actionEvent -> {
-            SelectLevelView selectLevelView = new SelectLevelView();
-            SelectLevelPresenter selectLevelPresenter = new SelectLevelPresenter(user, Difficulty.BEGINNER, selectLevelView, homeMenuView.getScene());
+            try {
+                SelectLevelView selectLevelView = new SelectLevelView();
+                SelectLevelPresenter selectLevelPresenter = new SelectLevelPresenter(user, Difficulty.BEGINNER, selectLevelView, homeMenuView.getScene());
 
-            Stage selectLevelStage = new Stage();
+                Stage selectLevelStage = new Stage();
 
-            selectLevelStage.initOwner(homeMenuView.getScene().getWindow());
-            selectLevelStage.initModality(Modality.APPLICATION_MODAL);
-            selectLevelStage.setScene(new Scene(selectLevelView));
-            selectLevelStage.getScene().getWindow().centerOnScreen();
-            selectLevelStage.getScene().getStylesheets().add("/stylesheet/selectlevelview.css");
-            selectLevelStage.showAndWait();
+                selectLevelStage.initOwner(homeMenuView.getScene().getWindow());
+                selectLevelStage.initModality(Modality.APPLICATION_MODAL);
+                selectLevelStage.setScene(new Scene(selectLevelView));
+                selectLevelStage.getScene().getWindow().centerOnScreen();
+                selectLevelStage.getScene().getStylesheets().add("/stylesheet/selectlevelview.css");
+                selectLevelStage.showAndWait();
+            } catch (PuzzleLoadException e) {
+                handlePuzzleLoadException(e);
+            } catch (Exception e) {
+                handleGenericException(e);
+            }
         });
 
         homeMenuView.getBtnChaos().setOnAction(actionEvent -> {
+            try {
             ChaosView chaosView = new ChaosView();
             ChaosPresenter chaosPresenter = new ChaosPresenter(user, chaosView, homeMenuView.getScene());
 
@@ -82,6 +97,11 @@ public class HomeMenuPresenter {
             chaosStage.getScene().getWindow().centerOnScreen();
             chaosStage.getScene().getStylesheets().add("/stylesheet/chaosview.css");
             chaosStage.showAndWait();
+            } catch (PuzzleLoadException e) {
+                handlePuzzleLoadException(e);
+            } catch (Exception e) {
+                handleGenericException(e);
+            }
         });
 
         homeMenuView.getBtnHighscores().setOnAction(actionEvent -> {
@@ -128,5 +148,22 @@ public class HomeMenuPresenter {
             CreditsStage.getScene().getStylesheets().add("/stylesheet/textviews.css");
             CreditsStage.showAndWait();
         });
+    }
+
+    private void handlePuzzleLoadException(PuzzleLoadException e) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Puzzle Error");
+        alert.setHeaderText("Failed to load game");
+        alert.setContentText(e.getUserFriendlyMessage());
+        alert.showAndWait();
+    }
+
+    private void handleGenericException(Exception e) {
+        e.printStackTrace();
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText("Failed to start game");
+        alert.setContentText(e.getMessage());
+        alert.showAndWait();
     }
 }

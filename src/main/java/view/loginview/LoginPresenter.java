@@ -15,15 +15,16 @@ public class LoginPresenter {
     private LoginView loginView;
     private UserManager userManager;
 
-    public LoginPresenter(LoginView loginView) {
+    public LoginPresenter(LoginView loginView) throws UserFileException {
         this.loginView = loginView;
 
         try {
             userManager = new UserManager();
         } catch (UserFileException e) {
             showErrorAlert("User Data Error", "Failed to load user data",
-                    "There was a problem loading user data: " + e.getMessage());
-            userManager = new UserManager();
+                    "The application cannot continue: " + e.getMessage());
+
+            throw e;
         }
 
         addEventHandlers();
